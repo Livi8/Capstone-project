@@ -35,22 +35,29 @@ To have these in my already created S3 Bucket, I will convert the 2 csv-s (SAU-G
 into parquet format and upload it to the right place.
 
   ![code](Picture6.png)
+  
   ![code](Picture7.png)
+  
+  ![code](Picture8.png)
  
  
 
 In the next step, I created a database called fishdb manually and filled the table with the 2 files using AWS Glue Crawler called fishcrawler.
  
- ![code](Picture8.png)
+ ![code](Picture9.png)
 
 Now I have metadata about my 2 dataset and I can see the schema of it.
 
 Then I configured Athena to output query results to the query-source-11144 bucket.
-I run several queries to check my table's data. I created a challange view and a MackerelsCatch view as well.
+I run several queries to check my table's data. I created a challenge view and a MackerelsCatch view as well.
  
-  ![code](Picture9.png)
   ![code](Picture10.png)
+  
   ![code](Picture11.png)
+  
+  ![code](Picture12.png)
+  
+  ![code](Picture13.png)
  
  
 
@@ -60,30 +67,35 @@ The query gives Fiji’s yearly open-sea revenue since 2001. It bounces around 6
 
 But I have only two csv-s' data, so I need to add the 3rd one using Cloud9 terminal in the same way as I did in the other cases.
  
- ![code](Picture12.png)
+ ![code](Picture14.png)
+ 
 I needed to rename two columns before the usual formatting and uploading.
 
- ![code](Picture13.png)
- ![code](Picture14.png)
+ ![code](Picture15.png)
+ 
+ ![code](Picture16.png)
  
 
 Then I reran the queries to have all the data needed.
 
- ![code](Picture15.png)
+ ![code](Picture17.png)
 
 
 Now I can see 3 results instead of only 2, it means I successfully added the data.
  
- ![code](Picture16.png)
- ![code](Picture17.png)
+ ![code](Picture18.png)
+ 
+ ![code](Picture19.png)
  
 
 I got the result that the USA dominates with around 860 t, followed by Fiji with 602 t, the rest territories are under 130 t.
 Geographic spread is wide (East Asia, Pacific islands, USA), but “Unknown Fishing Country” appears, indicating data-quality gaps.
 
-  ![code](Picture18.png)
-  ![code](Picture19.png)
   ![code](Picture20.png)
+  
+  ![code](Picture21.png)
+  
+  ![code](Picture22.png)
  
  
 
@@ -93,22 +105,27 @@ I wrote further 3 queries:
 
 
 Query 1:
-![code](Picture21.png)
-![code](Picture22.png)
+![code](Picture23.png)
+
+![code](Picture24.png)
 
 
 The query shoes that Indonesia makes the most money from fishing by the checking the total catch value, followed by China and Japan. It is understandable since these are arounded by sea. 
 
 Query 2:
- ![code](Picture23.png)
- ![code](Picture24.png)
+ ![code](Picture25.png)
+ 
+ ![code](Picture26.png)
+ 
 We can see the total value and total tonnes by the year and ocean area. For example, in 2000 open seas has 198 countries fishing, while Fiji EEZ has 18 countries. I can see the total tonnes and value of these as well in each year.
 This ratio can be seen in the other years as well meaning the international waters are a way busier. 
 
 
 Query 3:
- ![code](Picture25.png)
- ![code](Picture26.png)
+ ![code](Picture27.png)
+ 
+ ![code](Picture28.png)
+ 
 I wanted to check the number of species and the total tonnes in each country. Fiji catches the most variety of fish (67 different types) even though it is a small country. Big countries like 
 Japan focuses on fewer types but much larger quantities.
 
@@ -121,5 +138,3 @@ that processes fisheries data and generates meaningful insights about global fis
 
 
 
-
-<img width="462" height="603" alt="image" src="https://github.com/user-attachments/assets/af7de115-5d17-438d-bc5f-37314ef339d5" />
