@@ -15,7 +15,7 @@ analyze fisheries data. Specifically, I needed to:
 I worked with three main data files: SAU-GLOBAL-1-v48-0.csv, SAU-HighSeas-71-v48-0.csv and SAU-EEZ-242-v48-0.csv.
 
 Firstly, I set up a development environment using AWS Cloud9.
- 
+![sg]([http://url/to/img.png](https://github.com/Livi8/Capstone-project/blob/main/Screenshot%202025-12-10%20at%2021.55.14.png))
 
 Then I made two S3 Bucket, namely data-source-11144 and query-source-11144. This way I prepaired the storage place.
  
